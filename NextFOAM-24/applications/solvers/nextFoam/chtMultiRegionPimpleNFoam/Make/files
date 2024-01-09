@@ -1,0 +1,3 @@
+chtMultiRegionPimpleNFoam.C
+
+EXE = $(FOAM_APPBIN)/chtMultiRegionPimpleNFoam

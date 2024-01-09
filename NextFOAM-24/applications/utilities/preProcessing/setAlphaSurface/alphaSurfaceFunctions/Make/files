@@ -1,0 +1,11 @@
+cork/src/cork.cpp
+cork/src/util/timer.cpp
+cork/src/util/log.cpp
+cork/src/isct/empty3d.cpp
+cork/src/isct/quantization.cpp
+cork/src/file_formats/files.cpp
+cork/src/file_formats/ifs.cpp
+cork/src/file_formats/off.cpp
+cork/src/isct/triangle.c
+
+LIB = $(FOAM_LIBBIN)/libalphaSurfaceFunctions

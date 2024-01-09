@@ -1,0 +1,21 @@
+FOAM_EXTRA_CXXFLAGS := \
+    -Wno-sign-compare \
+    -Wno-strict-aliasing \
+    -Wno-old-style-cast \
+    $(FOAM_EXTRA_CXXFLAGS)
+
+EXE_INC = \
+    -I$(LIB_SRC)/finiteVolume/lnInclude \
+    -I$(LIB_SRC)/surfMesh/lnInclude \
+    -I$(LIB_SRC)/meshTools/lnInclude \
+    -IalphaSurfaceFunctions/cork/src \
+    -IalphaSurfaceFunctions/eigen3 \
+    -IalphaSurfaceFunctions/libigl/include/igl \
+    -IalphaSurfaceFunctions/libigl/include/igl/copyleft/cork
+
+EXE_LIBS = \
+    -lfiniteVolume \
+    -lsurfMesh \
+    -lmeshTools \
+    -ltwoPhaseProperties \
+    -lalphaSurfaceFunctions 
