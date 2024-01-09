@@ -30,13 +30,13 @@ $ make -j 4 all
 $ make install
 $ sudo "echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc"
 ```
+Clone `nextfoam-solver` and move to the top directory
 
-Download **NextFOAM-24** and **ThirdParty-24** source and unarchive under `/opt/OpenFOAM` as followings
 ```
 $ sudo mkdir -p /opt/OpenFOAM
-$ cd /opt/OpenFOAM
-$ sudo wget -qO- http://github.com/nextfoam/NextFOAM-24/NextFOAM-24.tar.gz | tar zxf
-$ sudo wget -qO- http://github.com/nextfoam/NextFOAM-24/ThirdParty-24.tar.gz | tar zxf
+$ git clone https://github.com/nextfoam/nextfoam-solver.git
+$ sudo mv nextfoam-solver/NextFOAM-24 /opt/OpenFOAM
+$ sudo mv nextfoam-solver/ThirdParty-24 /opt/OpenFOAM
 ```
 
 Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-24/etc/bashrc`
