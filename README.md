@@ -27,7 +27,7 @@ $ rm openmpi-4.0.5.tar.gz
 $ cd openmpi-4.0.5
 $ ./configure --prefix=/opt/openmpi-4.0.5
 $ make -j 4 all
-$ make install
+$ sudo make install
 $ sudo "echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc"
 ```
 Clone `nextfoam-solver` and move to the top directory
