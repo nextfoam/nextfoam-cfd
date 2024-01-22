@@ -52,7 +52,7 @@ Download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
 ```
 $ cd /opt/OpenFOAM/ThirdParty-24
 $ sudo wget https://sources.easybuild.io/s/SCOTCH/scotch_6.1.0.tar.gz
-$ tar zxf scotch_6.1.0.tar.gz
+$ sudo tar zxf scotch_6.1.0.tar.gz
 
 $ sudo vi /opt/OpenFOAM/NextFOAM-24/etc/config.sh/scotch
 
@@ -69,7 +69,7 @@ $ export WM_NCOMPPROCS=4
 
 ```
 $ sudo apt install gcc-9 g++-9
-$ export WM_COMPILE_CONTROL="version=9"
+$ sudo export WM_COMPILE_CONTROL="version=9"
 $ sudo ./Allwmake
 ```
 
