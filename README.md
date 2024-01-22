@@ -48,11 +48,28 @@ projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
 export WM_PROJECT_USER_DIR="/opt/$WM_PROJECT/nextfoam-$WM_PROJECT_VERSION"
 ```
 
+Download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
+```
+$ cd /opt/OpenFOAM/ThirdParty-24
+$ sudo wget https://sources.easybuild.io/s/SCOTCH/scotch_6.1.0.tar.gz
+$ tar zxf scotch_6.1.0.tar.gz
+
+$ sudo vi /opt/OpenFOAM/NextFOAM-24/etc/config.sh/scotch
+
+SCOTCH_VERSION=scotch_6.1.0
+```
+
 Compile NextFOAM-24. Set your number of cores at `WM_NCOMPPROCS`
 ```
 $ sudo source /opt/OpenFOAM/NextFOAM-24/etc/bashrc
 $ cd /opt/OpenFOAM/NextFOAM-24
 $ export WM_NCOMPPROCS=4
+```
+**(Note)** If you install NextFOAM-24 on Ubuntu 22.04, you should install `gcc-9` and `g++-9` and set `gcc-9` as the compiler. 
+
+```
+$ sudo apt install gcc-9 g++-9
+$ export WM_COMPILE_CONTROL="version=9"
 $ sudo ./Allwmake
 ```
 
