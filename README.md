@@ -1,8 +1,20 @@
-## About NextFOAM
-NextFOAM is a free, open source computational fluid dynamics (CFD) software package released by [NEXTfoam](https://nextfoam.co.kr/foam-Introen.php) based on OpenFOAM released by OpenCFD.
+## About NextFOAM solver
+NextFOAM solver is a free, open source computational fluid dynamics (CFD) software package released by [NEXTfoam](https://nextfoam.co.kr/foam-Introen.php) based on OpenFOAM released by OpenCFD.
 
 ## Copyright
 NextFOAM is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See the file COPYING in this directory or http://www.gnu.org/licenses/, for a description of the GNU General Public License terms under which you can copy the files.
+
+## NextFOAM-24 features than OpenFOAM released by OpenCFD
+- Improvement of pressure-velocity coupling
+- Improvement of velocity & density interpolation
+- Improvement of under-relaxation factor dependency of navier-stokes equation
+- Improvement of discretization method of pressure gradient term
+- Improvement of time step dependency of transient solver
+- Improvement of linearization method of production term of turbulence model
+- Development of convergence judgment function of CHT solver
+- Improvement of porous media model
+- Improvement of MRF (Multi Reference Frame)
+- Increase of convergence of radiation model
 
 ## Download and Installation instructions on Ubuntu Linux
 
