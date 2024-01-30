@@ -25,35 +25,36 @@ NextFOAM top directory is set as `/opt/NextFOAM` for all users. Installation dir
 | NextFOAM-24 | /opt/OpenFOAM/NextFOAM-24 |
 | ThirdParty-24 | /opt/OpenFOAM/ThirdParty-24 |
 
-Install required packages for building NextFOAM-24 in the Ubuntu Linux
+Install required packages for building NextFOAM-24 in the Ubuntu Linux. Run commands as root:
+
 ```
-$ sudo apt-get -y update
-$ sudo apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev
+# apt-get -y update
+# apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev
 ```
 
 Download `openmpi 4.0.5` source and install on `/opt/openmpi-4.0.5` directory
 ```
-$ wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.5.tar.gz
-$ tar zxf openmpi-4.0.5.tar.gz
-$ rm openmpi-4.0.5.tar.gz
-$ cd openmpi-4.0.5
-$ ./configure --prefix=/opt/openmpi-4.0.5
-$ make -j 4 all
-$ sudo make install
-$ sudo "echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc"
+# wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.5.tar.gz
+# tar zxf openmpi-4.0.5.tar.gz
+# rm openmpi-4.0.5.tar.gz
+# cd openmpi-4.0.5
+# ./configure --prefix=/opt/openmpi-4.0.5
+# make -j 4 all
+# make install
+# echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc
 ```
 Clone `nextfoam-solver` and move to the top directory
 
 ```
-$ sudo mkdir -p /opt/OpenFOAM
-$ git clone https://github.com/nextfoam/nextfoam-solver.git
-$ sudo mv nextfoam-solver/NextFOAM-24 /opt/OpenFOAM
+# mkdir -p /opt/OpenFOAM
+# git clone https://github.com/nextfoam/nextfoam-solver.git
+# mv nextfoam-solver/NextFOAM-24 /opt/OpenFOAM
 $ sudo mv nextfoam-solver/ThirdParty-24 /opt/OpenFOAM
 ```
 
 Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-24/etc/bashrc`
 ```
-$ sudo vi /opt/OpenFOAM/NextFOAM-24/etc/bashrc
+# vi /opt/OpenFOAM/NextFOAM-24/etc/bashrc
 
 export WM_PROJECT_VERSION=24
 projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
@@ -62,33 +63,33 @@ export WM_PROJECT_USER_DIR="/opt/$WM_PROJECT/nextfoam-$WM_PROJECT_VERSION"
 
 Download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
 ```
-$ cd /opt/OpenFOAM/ThirdParty-24
-$ sudo wget https://sources.easybuild.io/s/SCOTCH/scotch_6.1.0.tar.gz
-$ tar zxf scotch_6.1.0.tar.gz
+# cd /opt/OpenFOAM/ThirdParty-24
+# wget https://sources.easybuild.io/s/SCOTCH/scotch_6.1.0.tar.gz
+# tar zxf scotch_6.1.0.tar.gz
 
-$ sudo vi /opt/OpenFOAM/NextFOAM-24/etc/config.sh/scotch
+# vi /opt/OpenFOAM/NextFOAM-24/etc/config.sh/scotch
 
 SCOTCH_VERSION=scotch_6.1.0
 ```
 
 Compile NextFOAM-24. Set your number of cores at `WM_NCOMPPROCS`
 ```
-$ sudo source /opt/OpenFOAM/NextFOAM-24/etc/bashrc
-$ cd /opt/OpenFOAM/NextFOAM-24
-$ export WM_NCOMPPROCS=4
+# source /opt/OpenFOAM/NextFOAM-24/etc/bashrc
+# cd /opt/OpenFOAM/NextFOAM-24
+# export WM_NCOMPPROCS=4
 ```
 **(Note)** If you install NextFOAM-24 on Ubuntu 22.04, you should install `gcc-9` and `g++-9` and set `gcc-9` as the compiler. 
 
 ```
-$ sudo apt install gcc-9 g++-9
-$ export WM_COMPILE_CONTROL="version=9"
-$ sudo ./Allwmake
+# apt install gcc-9 g++-9
+# export WM_COMPILE_CONTROL="version=9"
+# ./Allwmake
 ```
 
 Enable the environment variables at start time
 ```
-$ sudo "echo 'source /opt/OpenFOAM/NextFOAM-24/etc/bashrc' >> /etc/bash.bashrc"
-$ sudo "echo 'export WM_COMPILE_CONTROL="version=9"' >> /etc/bash.bashrc"
+# echo 'source /opt/OpenFOAM/NextFOAM-24/etc/bashrc' >> /etc/bash.bashrc
+# echo 'export WM_COMPILE_CONTROL="version=9"' >> /etc/bash.bashrc
 ```
 
 ## Contact to NEXTfoam
