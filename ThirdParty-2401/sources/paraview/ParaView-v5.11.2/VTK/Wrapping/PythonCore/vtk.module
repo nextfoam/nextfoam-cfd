@@ -1,0 +1,10 @@
+NAME
+  VTK::WrappingPythonCore
+LIBRARY_NAME
+  vtkWrappingPythonCore
+DEPENDS
+  VTK::CommonCore
+  VTK::CommonDataModel
+  VTK::Python
+  VTK::vtksys
+EXCLUDE_WRAP

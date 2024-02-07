@@ -1,3 +1,0 @@
-dummyKahipDecomp.C
-
-LIB = $(FOAM_LIBBIN)/dummy/libkahipDecomp

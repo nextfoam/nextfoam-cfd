@@ -1,0 +1,42 @@
+NAME
+  VTK::IOExport
+LIBRARY_NAME
+  vtkIOExport
+IMPLEMENTABLE
+GROUPS
+  Rendering
+DEPENDS
+  VTK::CommonCore
+  VTK::IOCore
+  VTK::IOImage
+  VTK::IOXML
+  VTK::RenderingContext2D
+  VTK::RenderingCore
+  VTK::RenderingFreeType
+  VTK::RenderingVtkJS
+PRIVATE_DEPENDS
+  VTK::CommonDataModel
+  VTK::CommonMath
+  VTK::CommonTransforms
+  VTK::DomainsChemistry
+  VTK::FiltersCore
+  VTK::FiltersGeometry
+  VTK::IOImage
+  VTK::IOGeometry
+  VTK::ImagingCore
+  VTK::nlohmannjson
+  VTK::libharu
+  VTK::utf8
+TEST_DEPENDS
+  VTK::ChartsCore
+  VTK::CommonColor
+  VTK::FiltersModeling
+  VTK::IOParallel
+  VTK::InteractionImage
+  VTK::InteractionStyle
+  VTK::RenderingAnnotation
+  VTK::RenderingContextOpenGL2
+  VTK::RenderingLabel
+  VTK::RenderingVolumeOpenGL2
+  VTK::TestingRendering
+  VTK::ViewsContext2D

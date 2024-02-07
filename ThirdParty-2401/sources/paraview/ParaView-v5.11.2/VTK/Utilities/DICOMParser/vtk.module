@@ -1,0 +1,9 @@
+NAME
+  VTK::DICOMParser
+LIBRARY_NAME
+  vtkDICOMParser
+LICENSE_FILES
+  Copyright.txt
+PRIVATE_DEPENDS
+  VTK::vtksys
+EXCLUDE_WRAP

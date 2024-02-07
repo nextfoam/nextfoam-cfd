@@ -1,3 +1,0 @@
-Test-cpuInfo.C
-
-EXE = $(FOAM_USER_APPBIN)/Test-cpuInfo

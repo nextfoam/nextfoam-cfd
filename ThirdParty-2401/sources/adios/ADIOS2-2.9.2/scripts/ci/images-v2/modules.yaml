@@ -1,0 +1,10 @@
+modules:
+  default:
+    enable:
+    - tcl
+    tcl:
+      hash_length: 0
+      all:
+        autoload: 'direct'
+      projections:
+        all: '{name}/{version}'

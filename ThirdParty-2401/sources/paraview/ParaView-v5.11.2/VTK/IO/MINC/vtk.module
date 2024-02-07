@@ -1,0 +1,26 @@
+NAME
+  VTK::IOMINC
+LIBRARY_NAME
+  vtkIOMINC
+LICENSE_FILES
+  Copyright.txt
+GROUPS
+  StandAlone
+DEPENDS
+  VTK::CommonCore
+  VTK::CommonExecutionModel
+  VTK::IOCore
+  VTK::IOImage
+PRIVATE_DEPENDS
+  VTK::CommonDataModel
+  VTK::CommonMath
+  VTK::CommonMisc
+  VTK::CommonTransforms
+  VTK::FiltersHybrid
+  VTK::RenderingCore
+  VTK::netcdf
+  VTK::vtksys
+TEST_DEPENDS
+  VTK::InteractionImage
+  VTK::RenderingOpenGL2
+  VTK::TestingRendering
