@@ -15,7 +15,6 @@ NextFOAM is free software: you can redistribute it and/or modify it under the te
 - Development of convergence judgment function of CHT solver
 - Improvement of porous media model
 - Improvement of MRF (Multi Reference Frame)
-- Increase of convergence of radiation model
 
 ## Download and Installation instructions on Ubuntu Linux
 
