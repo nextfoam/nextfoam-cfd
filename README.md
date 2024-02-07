@@ -74,11 +74,7 @@ SCOTCH_VERSION=scotch_6.1.0
 ```
 
 Compile NextFOAM-2401. Set your number of cores at `WM_NCOMPPROCS`
-```
-# source /opt/OpenFOAM/NextFOAM-2401/etc/bashrc
-# cd /opt/OpenFOAM/NextFOAM-2401
-# export WM_NCOMPPROCS=4
-```
+
 **(Note)** If you install NextFOAM-2401 on Ubuntu 22.04, you should install `gcc-9` and `g++-9` and set `gcc-9` as the compiler. 
 
 ```
@@ -87,10 +83,10 @@ Compile NextFOAM-2401. Set your number of cores at `WM_NCOMPPROCS`
 # echo 'export WM_COMPILE_CONTROL="version=9"' >> /etc/bash.bashrc
 ```
 
-Build using `Allwmake` command
 ```
+# source /opt/OpenFOAM/NextFOAM-2401/etc/bashrc
 # cd /opt/OpenFOAM/NextFOAM-2401
-# source etc/bashrc
+# export WM_NCOMPPROCS=4
 # ./Allwmake
 ```
 
