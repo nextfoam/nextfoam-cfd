@@ -96,4 +96,8 @@ Enable the environment variables at start time
 ```
 
 ## Contact to NEXTfoam
-Contact to NEXTfoam by marketing@nextfoam.co.kr
+http://www.nextfoam.co.kr
+
+http://blog.nextfoam.co.kr
+
+marketing@nextfoam.co.kr
