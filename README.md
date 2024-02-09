@@ -49,7 +49,7 @@ Clone `nextfoam-solver` and move to the top directory
 # mkdir -p /opt/OpenFOAM
 # git clone https://github.com/nextfoam/nextfoam-solver.git
 # mv nextfoam-solver/NextFOAM-2401 /opt/OpenFOAM
-$ sudo mv nextfoam-solver/ThirdParty-2401 /opt/OpenFOAM
+# mv nextfoam-solver/ThirdParty-2401 /opt/OpenFOAM
 ```
 
 Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-2401/etc/bashrc`
