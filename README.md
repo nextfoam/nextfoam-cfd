@@ -1,5 +1,5 @@
-## About NextFOAM solver
-NextFOAM solver is a free, open source computational fluid dynamics (CFD) software package released by [NEXTfoam](https://nextfoam.co.kr/foam-Introen.php) based on OpenFOAM released by OpenCFD.
+## About NextFOAM-CFD
+NextFOAM-CFD is a free, open source computational fluid dynamics (CFD) software package released by [NEXTfoam](https://nextfoam.co.kr/foam-Introen.php) based on OpenFOAM released by OpenCFD.
 
 ## Copyright
 NextFOAM is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See the file COPYING in this directory or http://www.gnu.org/licenses/, for a description of the GNU General Public License terms under which you can copy the files.
@@ -43,13 +43,13 @@ Download `openmpi 4.0.5` source and install on `/opt/openmpi-4.0.5` directory
 # make install
 # echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc
 ```
-Clone `nextfoam-solver` and move to the top directory
+Clone `nextfoam-cfd` and move to the top directory
 
 ```
 # mkdir -p /opt/OpenFOAM
-# git clone https://github.com/nextfoam/nextfoam-solver.git
-# mv nextfoam-solver/NextFOAM-2401 /opt/OpenFOAM
-# mv nextfoam-solver/ThirdParty-2401 /opt/OpenFOAM
+# git clone https://github.com/nextfoam/nextfoam-cfd.git
+# mv nextfoam-cfd/NextFOAM-2401 /opt/OpenFOAM
+# mv nextfoam-cfd/ThirdParty-2401 /opt/OpenFOAM
 ```
 
 Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-2401/etc/bashrc`
