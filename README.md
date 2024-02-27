@@ -28,33 +28,33 @@ NextFOAM top directory is set as `/opt/OpenFOAM` for all users. Installation dir
 Install required packages for building NextFOAM-2401 in the Ubuntu Linux. Run commands as root:
 
 ```
-# apt-get -y update
-# apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev cmake
+apt-get -y update
+apt-get -y install build-essential flex zlib1g-dev libgmp-dev libmpfr-dev cmake
 ```
 
 Download `openmpi 4.0.5` source and install on `/opt/openmpi-4.0.5` directory
 ```
-# wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.5.tar.gz
-# tar zxf openmpi-4.0.5.tar.gz
-# rm openmpi-4.0.5.tar.gz
-# cd openmpi-4.0.5
-# ./configure --prefix=/opt/openmpi-4.0.5
-# make -j 4 all
-# make install
-# echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc
+wget https://download.open-mpi.org/release/open-mpi/v4.0/openmpi-4.0.5.tar.gz
+tar zxf openmpi-4.0.5.tar.gz
+rm openmpi-4.0.5.tar.gz
+cd openmpi-4.0.5
+./configure --prefix=/opt/openmpi-4.0.5
+make -j 4 all
+make install
+echo 'export PATH=$PATH:/opt/openmpi-4.0.5/bin' >> /etc/bash.bashrc
 ```
 Clone `nextfoam-cfd` and move to the top directory
 
 ```
-# mkdir -p /opt/OpenFOAM
-# git clone https://github.com/nextfoam/nextfoam-cfd.git
-# mv nextfoam-cfd/NextFOAM-2401 /opt/OpenFOAM
-# mv nextfoam-cfd/ThirdParty-2401 /opt/OpenFOAM
+mkdir -p /opt/OpenFOAM
+git clone https://github.com/nextfoam/nextfoam-cfd.git
+mv nextfoam-cfd/NextFOAM-2401 /opt/OpenFOAM
+mv nextfoam-cfd/ThirdParty-2401 /opt/OpenFOAM
 ```
 
 Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-2401/etc/bashrc`
 ```
-# vi /opt/OpenFOAM/NextFOAM-2401/etc/bashrc
+vi /opt/OpenFOAM/NextFOAM-2401/etc/bashrc
 
 export WM_PROJECT_VERSION=2401
 projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
@@ -62,11 +62,11 @@ projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
 
 **(Note)** When running `decomposePar` command, the no scotch library error is shown, download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
 ```
-# cd /opt/OpenFOAM/ThirdParty-2401
-# wget https://sources.easybuild.io/s/SCOTCH/scotch_6.1.0.tar.gz
-# tar zxf scotch_6.1.0.tar.gz
+cd /opt/OpenFOAM/ThirdParty-2401
+wget https://sources.easybuild.io/s/SCOTCH/scotch_6.1.0.tar.gz
+tar zxf scotch_6.1.0.tar.gz
 
-# vi /opt/OpenFOAM/NextFOAM-2401/etc/config.sh/scotch
+vi /opt/OpenFOAM/NextFOAM-2401/etc/config.sh/scotch
 
 SCOTCH_VERSION=scotch_6.1.0
 ```
@@ -76,21 +76,21 @@ Compile NextFOAM-2401. Set your number of cores at `WM_NCOMPPROCS`
 **(Note)** If you install NextFOAM-2401 on Ubuntu 22.04, you should install `gcc-9` and `g++-9` and set `gcc-9` as the compiler. 
 
 ```
-# apt install gcc-9 g++-9
-# export WM_COMPILE_CONTROL="version=9"
-# echo 'export WM_COMPILE_CONTROL="version=9"' >> /etc/bash.bashrc
+apt install gcc-9 g++-9
+export WM_COMPILE_CONTROL="version=9"
+echo 'export WM_COMPILE_CONTROL="version=9"' >> /etc/bash.bashrc
 ```
 
 ```
-# source /opt/OpenFOAM/NextFOAM-2401/etc/bashrc
-# cd /opt/OpenFOAM/NextFOAM-2401
-# export WM_NCOMPPROCS=4
-# ./Allwmake
+source /opt/OpenFOAM/NextFOAM-2401/etc/bashrc
+cd /opt/OpenFOAM/NextFOAM-2401
+export WM_NCOMPPROCS=4
+./Allwmake
 ```
 
 Enable the environment variables at start time
 ```
-# echo 'source /opt/OpenFOAM/NextFOAM-2401/etc/bashrc' >> /etc/bash.bashrc
+echo 'source /opt/OpenFOAM/NextFOAM-2401/etc/bashrc' >> /etc/bash.bashrc
 ```
 
 ## Contact to NEXTfoam
