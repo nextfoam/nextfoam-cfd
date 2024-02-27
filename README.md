@@ -58,7 +58,6 @@ Setup the environment variables in the `/opt/OpenFOAM/NextFOAM-2401/etc/bashrc`
 
 export WM_PROJECT_VERSION=2401
 projectDir="/opt/OpenFOAM/NextFOAM-$WM_PROJECT_VERSION"
-export WM_PROJECT_USER_DIR="/opt/$WM_PROJECT/nextfoam-$WM_PROJECT_VERSION"
 ```
 
 **(Note)** When running `decomposePar` command, the no scotch library error is shown, download `SCOTCH-6.1.0` and set this version in the `etc/config.sh/scotch`
