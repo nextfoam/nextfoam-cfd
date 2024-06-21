@@ -16,7 +16,7 @@ NextFOAM is free software: you can redistribute it and/or modify it under the te
 - Improvement of porous media model
 - Improvement of MRF (Multi Reference Frame)
 
-## Download and Installation instructions on Ubuntu Linux
+## Install on Ubuntu Linux with gcc
 
 NextFOAM top directory is set as `/opt/OpenFOAM` for all users. Installation directories are followings:
 
