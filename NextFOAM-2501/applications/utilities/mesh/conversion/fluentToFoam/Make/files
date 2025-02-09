@@ -1,0 +1,3 @@
+fluentToFoam.L
+
+EXE = $(FOAM_APPBIN)/fluentToFoam

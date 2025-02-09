@@ -1,0 +1,22 @@
+FOAM_EXTRA_CFLAGS := \
+    -DNO_TIMER \
+    -DREDUCED \
+    -DCDT_ONLY \
+    -DTRILIBRARY \
+    -Wall \
+    -DANSI_DECLARATORS \
+    -Wno-strict-overflow \
+    $(FOAM_EXTRA_CFLAGS)
+
+FOAM_EXTRA_CXXFLAGS := \
+    -Wno-old-style-cast \
+    $(FOAM_EXTRA_CXXFLAGS)
+
+EXE_INC = \
+    -Wno-unused-variable \
+    -Wno-unused-but-set-variable
+
+LIB_LIBS = \
+    -lmpfr \
+    -lgmpxx \
+    -lgmp

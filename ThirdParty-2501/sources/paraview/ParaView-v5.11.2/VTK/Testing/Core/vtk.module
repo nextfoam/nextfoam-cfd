@@ -1,0 +1,10 @@
+NAME
+  VTK::TestingCore
+LIBRARY_NAME
+  vtkTestingCore
+DEPENDS
+  VTK::CommonCore
+  VTK::vtksys
+TEST_DEPENDS
+  VTK::CommonDataModel
+EXCLUDE_WRAP

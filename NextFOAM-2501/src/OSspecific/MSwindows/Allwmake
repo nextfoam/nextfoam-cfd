@@ -1,0 +1,22 @@
+#!/bin/sh
+cd "${0%/*}" || exit                                # Run from this directory
+targetType=libo                                     # Preferred library type
+. ${WM_PROJECT_DIR:?}/wmake/scripts/AllwmakeParseArguments $*
+
+#------------------------------------------------------------------------------
+
+[ -d lnInclude ] || mkdir lnInclude
+
+if [ -f /usr/include/FlexLexer.h ] && [ ! -f lnInclude/FlexLexer.h ]
+then
+    echo "Adding FlexLexer.h link to ${PWD##*/}/lnInclude for cross-compilation"
+    ln -sf /usr/include/FlexLexer.h lnInclude/FlexLexer.h
+fi
+
+unset COMP_FLAGS LINK_FLAGS
+
+# Make object (non-shared by default)
+# Never want/need openmp, especially for static objects
+wmake -no-openmp $targetType
+
+#------------------------------------------------------------------------------

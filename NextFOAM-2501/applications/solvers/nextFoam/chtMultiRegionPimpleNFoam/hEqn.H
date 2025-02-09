@@ -1,0 +1,1 @@
+../chtMultiRegionSimpleNFoam/hEqn.H

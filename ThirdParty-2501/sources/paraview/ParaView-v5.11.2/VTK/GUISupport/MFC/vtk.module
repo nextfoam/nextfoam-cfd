@@ -1,0 +1,10 @@
+NAME
+  VTK::GUISupportMFC
+LIBRARY_NAME
+  vtkGUISupportMFC
+CONDITION
+  MSVC
+DEPENDS
+  # If dependencies are added, update the list in the `CMakeLists.txt`.
+  VTK::RenderingOpenGL2
+EXCLUDE_WRAP
