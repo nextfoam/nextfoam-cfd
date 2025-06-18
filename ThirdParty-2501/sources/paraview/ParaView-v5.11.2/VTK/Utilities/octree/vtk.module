@@ -1,5 +1,0 @@
-NAME
-  VTK::octree
-LIBRARY_NAME
-  vtkoctree
-EXCLUDE_WRAP

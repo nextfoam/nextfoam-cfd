@@ -1,8 +1,0 @@
-NAME
-  VTK::TestingDataModel
-LIBRARY_NAME
-  vtkTestingDataModel
-DEPENDS
-  VTK::CommonDataModel
-  VTK::CommonExecutionModel
-EXCLUDE_WRAP

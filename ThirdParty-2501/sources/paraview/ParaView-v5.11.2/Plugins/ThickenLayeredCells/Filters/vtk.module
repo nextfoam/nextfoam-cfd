@@ -1,9 +1,0 @@
-NAME
-  ThickenLayeredCells::vtkThickenLayeredCellsFilters
-LIBRARY_NAME
-  vtkThickenLayeredCellsFilters
-DEPENDS
-  VTK::CommonExecutionModel
-PRIVATE_DEPENDS
-  VTK::CommonCore
-  VTK::CommonDataModel

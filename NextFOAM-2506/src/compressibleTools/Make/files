@@ -1,0 +1,25 @@
+ddtSchemes = finiteVolume/ddtSchemes
+$(ddtSchemes)/localTimeStep/localTimeStep.C
+$(ddtSchemes)/backwardDualTimeDdtScheme/backwardDualTimeDdtSchemes.C
+
+fluxSchemes = finiteVolume/fluxSchemes
+$(fluxSchemes)/fluxScheme/godunovFlux.C
+$(fluxSchemes)/roeFlux/roeFlux.C
+$(fluxSchemes)/hllcFlux/hllcFlux.C
+$(fluxSchemes)/rusanovFlux/rusanovFlux.C
+$(fluxSchemes)/AUSMplusFlux/AUSMplusFlux.C
+$(fluxSchemes)/AUSMplusUpFlux/AUSMplusUpFlux.C
+
+jacobians = finiteVolume/jacobians
+$(jacobians)/spectralRadius/spectralRadius.C
+
+fvPatchFields = fields/fvPatchFields
+derivedFvPatchFields = $(fvPatchFields)/derived
+$(derivedFvPatchFields)/farfieldRiemann/farfieldRiemannFvPatchFields.C
+$(derivedFvPatchFields)/subsonicInlet/subsonicInletFvPatchFields.C
+$(derivedFvPatchFields)/subsonicOutflow/subsonicOutflowFvPatchFields.C
+$(derivedFvPatchFields)/subsonicOutlet/subsonicOutletFvPatchFields.C
+
+solutionControl/timeMarchingControl/timeMarchingControl.C
+
+LIB = $(FOAM_LIBBIN)/libcompressibleTools

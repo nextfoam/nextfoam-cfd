@@ -1,5 +1,0 @@
-exprValueFieldTag.cxx
-
-Test-exprValue2.cxx
-
-EXE = $(FOAM_USER_APPBIN)/Test-exprValue2

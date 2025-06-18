@@ -1,7 +1,0 @@
-NAME
-  VTK::png
-LIBRARY_NAME
-  vtkpng
-DEPENDS
-  VTK::zlib
-THIRD_PARTY
